@@ -1,21 +1,8 @@
-# nomencl
-*.nlo
-
-# sagetex
-*.sagetex.sage
-*.sagetex.py
-*.sagetex.scmd
-
-# sympy
-*.sout
-*.sympy
-sympy-plots-for-*.tex/
-
-# todonotes
-*.tdo
-
-# xindy
-*.xdy
-
-#PDF
 *.pdf
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.gz
+*.toc
