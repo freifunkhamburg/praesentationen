@@ -14,7 +14,7 @@
 
 \title{Freifunk Hamburg}
 \author{hamburg.freifunk.net}
-\date{2014/Mai/13}
+\date{2014/Sept/20}
 
 %2
 \begin{document}
@@ -26,9 +26,9 @@
 		\item Öffentlich - freifunk steht jedem offen, als Nutzer oder Anbieter
 		\item Im Besitz der Gemeinschaft - Wird von den Menschen betrieben, die es nutzen
 		\item Nicht kommerziell
-		\item Nur freie, quelloffene software
+		\item Ausschliesslich freie, quelloffene Programme
 		\item Netzneutral - keine Manipulation der Datenströme
-		\item In  \href{http://freifunk.net/wie-mache-ich-mit/community-finden/}{69 Orten} gibt es bereits Freifunknetze mit mehr als 3300 Zugangspunkten
+		\item In  \href{http://freifunk.net/wie-mache-ich-mit/community-finden/}{102 Orten} gibt es bereits Freifunknetze mit mehr als 4700 Zugangspunkten
 	\end{itemize}
 \end{frame}
 
@@ -40,17 +40,16 @@
 
 %4
 \begin{frame}{Mesh}
-	Was ist ein mesh?
-	\begin{itemize}
-		\item to mesh = Englisch: vermaschen
-		\item Selbst organisierende Netzwerke
-		\item Jeder Router ist automatisch aktiver Teil des Netzwerks
-		\item hamburg.freifunk.net Nutzt das Protokoll B.A.T.M.A.N.-adv.
-	\end{itemize}
 	Zwei SSIDs
 	\begin{itemize}
 		\item Freifunk Zugang: hamburg.freifunk.net
-		\item Mashing (adhoc): f8:d1:11:87:52:2e
+		\item Meshing (adhoc): f8:d1:11:87:52:2e
+	\end{itemize}
+	Was ist ein mesh?
+	\begin{itemize}
+		\item to mesh = Englisch: vermaschen
+		\item Selbst organisierendes Netzwerk
+		\item hamburg.freifunk.net nutzt das Protokoll B.A.T.M.A.N.-adv.
 	\end{itemize}
 \end{frame}
 
@@ -333,7 +332,7 @@
 	\begin{itemize}
 		\item Da freifunk kein Kennwort nutzt, ist die Funkstrecke zum Zugangspunkt (wie bei allen offenen WLANs) unverschlüsselt
 		\item Wie sonst im Netz auch, nutzt nach Möglichkeit Ende-zu-Ende-Verschlüsselung
-		\item Verbindungen über die gateways laufen durch VPNs und sind verschlüsselt --> kein Zugriff auf das „Heimnetzwerk“ möglich
+		\item Verbindung freifunk-Knoten zu Gateway läuft durch VPN und ist verschlüsselt --> kein Zugriff auf das „Heimnetzwerk“ möglich
 	\end{itemize}
 \end{frame}
 
@@ -342,8 +341,8 @@
 \begin{frame}{Störerhaftung}
 	\begin{itemize}
 		\item Die Zugangspunkte gehen nicht direkt in das Internet
-		\item Es wird über das Internet eine verschlüsselte VPN-Verbindung zu den gateways aufgebaut
-		\item Selbst die gateways sind nicht die Ausgänge ins GBI, sondern bauen wiederum VPNs ins Ausland auf
+		\item Es wird über das Internet eine verschlüsselte VPN-Verbindung zu den Gateways aufgebaut
+		\item Selbst die Gateways sind nicht die Ausgänge ins GBI, sondern bauen wiederum VPNs ins Ausland auf
 	\end{itemize}
 \end{frame}
 
@@ -352,40 +351,69 @@
 \begin{frame}{Dienste}
 	Implementiert
 	\begin{itemize}
-		\item Internet
+		\item Internet (IPv4 \& IPv6)
 		\item Stadtweites Intranet (IPv4 \& IPv6)
 		\item Internet Dienste \href{http://hamburg.freifunk.net/wo-wird-gefunkt\#Dienste}{http://hamburg.freifunk.net/wo-wird-gefunkt\#Dienste}
 		\item Verbindungen zu anderen Städten und Netzwerken sowie deren Diensten
 	\end{itemize}
 \end{frame}
 
-
 %13
-\begin{frame}{Wie kann man mitmachen?}
-	\begin{itemize}
-		\item Alle können Freifunker\textunderscore innen werden, besondere technische Kenntnisse sind nicht notwendig
-		\item Werde ein Teil des Netzwerks, indem du bei dir im Haus einen Freifunk-Knoten aufstellst
-		\item Treffen jeden Montag ab 19:45 Uhr in den Rämen des CCCHH (z.Z. Humanist Lab), Freitags ab 19:45 Uhr im Attraktor
-		\item Verbreite die Idee! Entwickelt mit!
-	\end{itemize}
+\begin{frame}{Richtfunknetz}
+	\includegraphics[width=\textwidth]{Bilder/esmarch95}
+	\begin{columns}
+		\begin{column}{0.7\textwidth}
+			\begin{itemize}
+				\item Heute wird Verbund der Stadteile über VPN-Tunnel durch das Internet realisiert (Abhängigkeit vom Internet und zentraler Gateways)
+				\item Eine Alternative bietet der Aufbau einer eigenen Infrastruktur mit Richtfunkstrecken von Dach zu Dach
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.3\textwidth}
+			\begin{center}
+				\includegraphics[width=.8\textwidth]{Bilder/esmarch95-2}
+			\end{center}
+		\end{column}
+	\end{columns}
+	
 \end{frame}
 
 
 %14
-\begin{frame}{Entwickelt mit!}
+\begin{frame}{Wie kann man mitmachen?}
 	\begin{itemize}
-		\item \href{http://hamburg.freifunk.net}{Verbessert die Seite}
-		\item \href{http://knotenkarte.de}{Fügt der Knotenkarte neue Fähigkeiten hinzu}
-		\item \href{http://www.ohrensessel.net/ffhh/total}{Bohrt die Statistiken auf (gamification)}
-		\item \href{http://media.hamburg.freifunk.net}{Macht graphische Gestaltung}
-		\item \href{https://github.com/freifunkhamburg/}{Entwickelt firmware}
-		\item \href{http://wiki.freifunk.net/Freifunk_Hamburg\#Technik}{Helft das Netz zu administrieren}
-		\item \href{http://hamburg.freifunk.net/wo-wird-gefunkt\#Dienste}{Bietet eigene Dienste an}
+		\item Alle können Freifunker\textunderscore innen werden, besondere technische Kenntnisse sind nicht erforderlich
+		\item Werde ein Teil des Netzwerks, indem du bei dir im Haus einen Freifunk-Knoten aufstellst
+		\item Treffen jeden Montag ab 19:00 Uhr in den Rämen des CCCHH, Freitags ab 19:30 Uhr im Attraktor
 	\end{itemize}
 \end{frame}
 
 
 %15
+\begin{frame}{Helft mit!}
+	\begin{itemize}
+		\item \href{http://www.ohrensessel.net/ffhh/graph/total/year}{Stellt mehr Knoten auf}
+		\item \href{http://media.hamburg.freifunk.net}{Macht graphische Gestaltung}
+		\item Organisiert mit
+		\item Betreibt Öffentlichkeitsarbeit
+		\item \href{http://hamburg.freifunk.net/wo-wird-gefunkt\#Dienste}{Bietet eigene Dienste an}
+		\item Verbreitet die Idee
+	\end{itemize}
+\end{frame}
+
+
+%16
+\begin{frame}{Entwickelt mit!}
+	\begin{itemize}
+		\item \href{http://hamburg.freifunk.net}{Verbessert die Seite}
+		\item \href{http://knotenkarte.de}{Fügt der Knotenkarte neue Fähigkeiten hinzu}
+		\item \href{http://www.ohrensessel.net/ffhh/total}{Bohrt die Statistiken auf (gamification)}
+		\item \href{https://github.com/freifunkhamburg/}{Entwickelt firmware}
+		\item \href{http://wiki.freifunk.net/Freifunk_Hamburg\#Technik}{Helft das Netz zu administrieren}
+	\end{itemize}
+\end{frame}
+
+
+%17
 \begin{frame}{Vielen Dank!}
 	\begin{columns}
 		\begin{column}{0.6\textwidth}
@@ -394,7 +422,7 @@
 				\item Mail: kontakt@hamburg.freifunk.net
 		\end{itemize}
 		\end{column}
-		\begin{column}{0.5\textwidth}
+		\begin{column}{0.4\textwidth}
 			\begin{center}
 				\includegraphics[width=0.5\textwidth]{Bilder/cc-by}
 			\end{center}

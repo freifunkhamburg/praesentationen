@@ -1,4 +1,5 @@
 .DS_Store
+!.gitignore
 *.pdf
 *.aux
 *.log
