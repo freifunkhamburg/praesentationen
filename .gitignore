@@ -8,3 +8,5 @@
 *.snm
 *.gz
 *.toc
+*.pdf_tex
+*.swp
