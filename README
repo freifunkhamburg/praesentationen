@@ -1,1 +1,5 @@
 Präsentationen von hamburg.freifunk.net
+
+Neuere können kompiliert werden via:
+
+$ pdflatex -shell-escape 2014.11.29-pyunconf.tex
