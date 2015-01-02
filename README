@@ -1,5 +1,12 @@
 Präsentationen von hamburg.freifunk.net
 
-Neuere können kompiliert werden via:
+Neuere (ab PyUnconf2014) können kompiliert werden via:
 
+Als voraussetzung wird Inkscape benötigt [ http://inkscape.org ]. Auf dem Mac muss der Pfad zu den Umgebungsvarialblen der jeweiligen shell hinzugefuegt werden. Beispiel fuer zsh:
+$ vi ~/.zshrc
+hinzufuegen:
+export PATH=$PATH:/Applications/Inkscape.app/Contents/Resources/bin
+
+Dann 2x folgenden Befehl ausfuehren, um zu bauen:
 $ pdflatex -shell-escape 2014.11.29-pyunconf.tex
+
