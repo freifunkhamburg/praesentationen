@@ -1,6 +1,5 @@
 .DS_Store
 !.gitignore
-*.pdf
 *.aux
 *.log
 *.nav
@@ -10,3 +9,7 @@
 *.toc
 *.pdf_tex
 *.swp
+netz-*.pdf
+anker.pdf
+ffhh-anker.pdf
+in-hamburg-funkt-man-frei.pdf
