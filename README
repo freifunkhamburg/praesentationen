@@ -7,6 +7,6 @@ $ vi ~/.zshrc
 hinzufuegen:
 export PATH=$PATH:/Applications/Inkscape.app/Contents/Resources/bin
 
-Dann 2x folgenden Befehl ausfuehren, um zu bauen:
+Dann 3x folgenden Befehl ausfuehren, um zu bauen:
 $ pdflatex -shell-escape 2014.11.29-pyunconf.tex
 
