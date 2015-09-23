@@ -1,0 +1,141 @@
+\usetheme{default}
+\useoutertheme{default}
+\useinnertheme{circles}
+\usefonttheme{professionalfonts}
+
+\usepackage[default,osfigures,scale=0.95]{opensans}
+\usepackage[T1]{fontenc}
+\usepackage{calc}
+
+\usepackage{svg}
+
+%%% For xelatex on Mac
+%%\usepackage{fontspec}
+%%\usepackage{xunicode}
+%%\usepackage{xltxtra}
+%%\setmainfont{Gill Sans}
+%%\setmonofont[Scale=0.86]{Andale Mono}
+
+%%% For pdflatex
+%%\renewcommand\sfdefault{phv}
+%%\renewcommand\familydefault{\sfdefault}
+%%\usepackage{texnansi}
+%%\usepackage{marvosym}
+
+%\setbeamerfont{title}{size={\fontsize{48}{52}}}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{copyright in head/foot}{size=\Tiny}
+\setbeamerfont{framenumber in head/foot}{size=\footnotesize}
+
+\setbeamertemplate{itemize/enumerate body begin}{\Large}
+\setbeamertemplate{itemize/enumerate subbody begin}{\large\renewcommand{\baselinestretch}{1.25}\normalsize\setlength\leftmarginii  {0.6cm}}
+
+%\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Bilder/background.png}}
+
+\definecolor{ff-magenta}{RGB}{229, 40, 122}
+\definecolor{ff-blue}{RGB}{0, 158, 224}
+\definecolor{ff-yellow}{RGB}{255, 188, 65}
+
+\newcommand{\license}[1]{\def \thelicense {#1}}
+
+\newcommand{\hl}[1]{{\color{ff-yellow}#1}}
+\newcommand{\anker}{\includesvg[width=0.3cm]{anker}}
+\newcommand{\Anker}{\includesvg[width=0.45cm]{anker}}
+\newcommand{\ANKER}{\includesvg[width=0.6cm]{anker}}
+
+\setbeamertemplate{itemize item}{\Anker{}}
+\setbeamertemplate{itemize subitem}{\anker{}}
+
+\definecolor{ff-gray-darker}{RGB}{51, 51, 51}
+\definecolor{ff-gray-dark}{RGB}{68, 68, 68}
+\definecolor{ff-gray}{RGB}{102, 102, 102}
+\definecolor{ff-gray-light}{RGB}{214, 214, 214}
+\definecolor{ff-gray-lighter}{RGB}{237, 237, 237}
+
+
+\setbeamertemplate{navigation symbols}{} %no nav symbols
+
+\usepackage{color}
+\usecolortheme[named=ff-gray-lighter]{structure}
+\setbeamercolor{background canvas}{bg=ff-gray-darker}
+\setbeamercolor{normal text}{fg=ff-gray-lighter}
+\setbeamercolor{normal text}{fg=ff-gray-lighter}
+%\setbeamercolor{copyright in head/foot}{fg=gray}
+\setbeamercolor{framenumber in head/foot}{fg=ff-yellow}
+
+
+\setbeamertemplate{title page}{
+%    \thispagestyle{empty}
+    \addtocounter{framenumber}{-1}
+
+    {
+        \vspace{1.7cm}
+
+        \begin{figure}
+            \raggedright
+            \includesvg[width=2cm]{ffhh-anker}
+        \end{figure}
+    }
+
+    {
+        \vspace{-2.38cm}
+        {
+            \hspace{2.5cm}
+            \Huge
+            \bfseries
+            \inserttitle
+        }
+
+        \vspace{0.1cm}
+        {
+            \hspace{2.5cm}
+            \Large
+            \bfseries
+            \insertauthor
+        }
+    }
+}{}
+
+\setbeamertemplate{headline}{
+  \leavevmode
+}
+
+
+\setbeamertemplate{frametitle} {
+    \vskip 1cm
+    \leavevmode
+    \hbox{%
+        \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1ex]{frametitle}%
+            \hspace*{0.985cm}\LARGE\insertframetitle
+        \end{beamercolorbox}
+    }%
+}
+
+\newcounter{currentpage}
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+    \setcounter{currentpage}{\insertpagenumber - 1}
+
+    \ifnum \insertpagenumber=1
+        \leavevmode%
+        \hbox{%
+            \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=2ex,left]{framenumber in head/foot}%
+                \usebeamerfont{framenumber in head/foot}\hspace*{5ex}\thelicense
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[wd=.5\paperwidth, ht=2.25ex, dp=9pt, right]{framenumber in head/foot}%
+                \usebeamerfont{framenumber in head/foot}\insertdate\hspace*{5ex}
+            \end{beamercolorbox}
+        }%
+        \vskip0pt%
+    \else
+        \leavevmode%
+        \hbox{%
+            \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=2ex,left]{framenumber in head/foot}%
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[wd=.5\paperwidth, ht=2.25ex, dp=9pt, right]{framenumber in head/foot}%
+            \end{beamercolorbox}
+        }%
+        \vskip0pt%
+    \fi
+}
